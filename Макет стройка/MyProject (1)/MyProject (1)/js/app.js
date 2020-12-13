@@ -62,7 +62,7 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
-let sliderSlider = new Swiper('.slider-content__body', {
+let sliderSlider = new Swiper('.education-page__slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -72,7 +72,7 @@ let sliderSlider = new Swiper('.slider-content__body', {
 	*/
 	observer: true,
 	observeParents: true,
-	slidesPerView: 1,
+	slidesPerView: 4,
 	spaceBetween: 0,
 	autoHeight: true,
 	speed: 800,

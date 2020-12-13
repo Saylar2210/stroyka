@@ -113,5 +113,135 @@ body {
 }
 
 //===================================================================================================================================
+.document {
+	
+}
+.document-page {
+
+		// .document-page__title
+
+		&__title {
+			position: relative;
+			margin-top: -174px;
+			z-index: 2;
+			font-style: normal;
+			font-weight: 800;
+			font-size: 36px;
+			line-height: 46px;
+			text-align: center;
+			
+			color: #333333;
+		}
+
+		// .document-page__main
+
+		&__main {
+		}
+}
+
+.documents-items {
+	display: grid;
+	max-width: 1200px;
+	margin: 0 auto;
+	justify-content:center;
+	grid-template-rows: repeat(auto-fill, minmax(190px, 1fr));
+	grid-template-columns: repeat(auto-fill,262px);
+	grid-gap: 29px;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	padding-bottom: 81px;
+
+
+		// .documents-items__item
+
+		&__item {
+			background: #FFFFFF;
+			box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.0677994);
+			font-style: normal;
+			font-weight: 600;
+			font-size: 19px;
+			line-height: 23px;
+			img{
+				padding-bottom: 25px;
+				padding-top: 15px;
+			}
+			p{
+				margin: 0 auto;
+				max-width: 125px;
+			}
+		}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+.quality {
+	background-color: #E8E8E8;
+}
+.quality-page {
+
+		// .quality-page__items
+
+		&__items {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		// .quality-page__items-item
+
+		&__items-item {
+			padding: 42px 0 82px 0px;
+			max-width: 206px;
+			text-align: center;
+			margin-right: 92px;
+			&:last-child{
+				margin-right: 0;
+			}
+			img{
+				padding-bottom: 20px;
+			
+			}
+		}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+.education {
+}
+.education-page {
+
+		// .education-page__title
+
+		&__title {
+		}
+
+		// .education-page__slider
+
+		&__slider {
+		}
+
+		// .education-page__slider-item
+
+		&__slider-item {
+		}
+}
+
+.slider-info {
+}
+.slider-price {
+}
+.swiper-pagination{
+	margin-top: 53px;
+	margin-bottom: 70px;
+		
+	span{
+		width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	
+	}
+
+	.swiper-pagination-bullet-active{
+		background-color: #fff;
+		border: 2px solid #84AAED;
+	}
+ }
