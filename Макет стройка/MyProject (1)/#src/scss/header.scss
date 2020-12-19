@@ -4,11 +4,19 @@
 	width: 100%;
 	z-index: 50;
 	left: 0;
-	top: 35px;
-	// .header__row
+	z-index: 18;
+	
+	height: 100%;
+	
+
 }
 .menu {
+	&-bg{
+	background-color: #F6F6F6;
+	padding-top: 35px;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.149476);
 
+	}
 	// .menu__top
 
 	&__top {
@@ -17,6 +25,7 @@
 	// .menu__top-list
 
 	&__top-list {
+	
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -25,9 +34,7 @@
 .list {
 
 }
-.list-link {
-	
-}
+
 .logo {
 	display: flex;
 	
@@ -44,7 +51,7 @@
 			position: absolute;
 		width: 2px;
 		height: 100%;
-		
+		transition: all 0.8s ease 0s;
 		top: 4;
 		left: -25px;
 
@@ -165,10 +172,10 @@ img{
 
 	&__nav-list {
 		display: flex;
-		padding-bottom: 76px;
+		justify-content: space-between;
+		
 		li{
-			margin-right: 46px;
-			max-width: 300px;
+			
 			
 		a{
 			font-style: normal;
@@ -186,71 +193,20 @@ img{
 }
 
 
-.main-screen {
 
-	// .main-screen__global
-
-	&__global {
-		display: grid;
-		grid-template: 1fr / minmax(auto, 675px) 1fr;
-	}
-
-	// .main-screen__global-content
-
-	&__global-content {
-		
-	}
-
-	// .main-screen__global-img
-
-	&__global-img {
-	}
-}
-.main-screen-global-content {
-
-	// .main-screen-global-content__title
-
-	&__title {
-		font-style: normal;
-		font-weight: 900;
-		font-size: 40px;
-		line-height: 51px;
-
-		color: #333333;
-		p{
-			margin-top: 46px;
-			margin-bottom: 44px;
-			font-weight: 500;
-		font-size: 24px;
-		line-height: 28px;
-
-		}
-		span{
-			font-weight: 800;
-			font-size: 24px;
-			line-height: 31px;
-			font-style: bold;
-		}
-		a{
-			background: linear-gradient(90deg, #87AFF1 0%, #6C80CB 100%, #6C80CB 100%);
-			box-shadow: 0px 12px 20px rgba(132, 170, 237, 0.454846);
-			border-radius: 3px;
-			color: #fff;
-			padding: 16px 67px;
-		}
-	}
-}
 
 
 
 //====================================================================================================
 
 .icon-menu {
+
 	display: none;
-	@media (max-width: 767px) {
+	@media (max-width: 992px) {
+		
 		display: block;
 		position: absolute;
-		top: 24px;
+		top: 4px;
 		right: 10px;
 		width: 30px;
 		height: 18px;
@@ -263,7 +219,7 @@ img{
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background-color: #fff;
+			background-color: #000;
 			&:first-child {
 				top: 0px;
 			}
@@ -273,7 +229,9 @@ img{
 			}
 		}
 		&._active {
+		
 			span {
+				background-color: #fff;
 				transform: scale(0);
 				&:first-child {
 					transform: rotate(-45deg);
@@ -286,4 +244,115 @@ img{
 			}
 		}
 	}
+}
+
+	@media (max-width:992px){
+		.main-screen-global-content__title{
+			font-size: calc(40px + (20-20)*((100vw - 920px) / (970 - 320)));
+			// padding-left: calc(20px + (40-20)*((100vw - 320px) / (1200 - 320)));
+		}
+		.menu__nav{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			background-color:#000;
+			padding: 150px 0px 20px 0px;
+			overflow: auto;
+			z-index: 1;
+			padding: 69px 0 20px 0;
+			
+			@include tr(0px,-100%,0px);
+			@include anim(0.3s,0s);
+
+			
+		
+			&._active{
+				@include tr(0px,0,0px);
+			
+				
+			}
+	
+			
+		
+		.menu__nav-list {
+			flex-direction: column;
+			justify-content:center;
+			align-items: center;
+		
+			a{
+				color: #fff;
+				display: block;
+				width: 100%;
+				
+				align-items: center;
+				padding: 25px 0 25px 0;
+			
+				text-align: center;
+				&:hover{
+					color: #fff;
+				
+					background-color: #84AAED;
+				}
+			}
+			li{
+				width: 100%;
+					text-align: center;
+			
+				
+				
+			
+				&:after{
+					width: 4px;
+					height: 4px;
+					background-color: #fff;
+					right: 50%;
+					top:40px;
+					margin: 0px -2px 0px 0px;
+				}
+			}
+		}
+		
+	
+}
+.contact-menu__btn{
+	display: none;
+}
+.logo{
+	display: block;
+
+	p{
+		padding-top: 20px;
+		margin-left: 0;
+		&:after{
+			transition: all 0.8s ease 0s;
+			transform: rotate(-90deg);
+			
+			left: 40%;
+			top: -20px;
+		}
+	}
+}
+
+	}
+	@media (max-width:685px){
+		.main-screen__global-img {
+			display: none;
+			
+		
+	}
+	.main-screen-global-content__title{
+		display: block;
+	}
+	.main-screen-global-content{
+		grid-template: 1fr / minmax(300px, 100%) minmax(auto, 1fr) ;
+		text-align: center;
+	
+	}
+	.icon{
+		display: none;
+	}
+	
 }
